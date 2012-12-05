@@ -3,9 +3,6 @@
 echo "download tony's tmux config."
 git clone https://github.com/tony/tmux-config.git ~/.tmux-tony
 
-echo "copy tmux config to home"
-ln -s ~/.tmux-tony/.tmux.conf ~/.tmux.conf
-
 echo "go into tmux-tony repo"
 cd ~/.tmux-tony
 
@@ -25,7 +22,7 @@ echo "compile our binary"
 make
 
 echo "install our binary to /usr/local/bin/tmux-mem-cpu-load"
-sudo make install
+cp tmux-mem-cpu-load ~/bin/
 
 echo "go home"
 cd ~
